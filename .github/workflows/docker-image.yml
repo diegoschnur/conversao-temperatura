@@ -1,0 +1,17 @@
+name: CI
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  CI:
+    runs-on: ubuntu-latest
+  
+    steps:
+      - uses: actions/checkout@v3
+    
+      - name: Setup do NodeJS
+        uses: actions/setup-node@v3.8.1
+        with:
+          node-version: 18.16.1
